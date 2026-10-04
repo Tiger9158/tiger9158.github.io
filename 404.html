@@ -367,6 +367,11 @@
                 targetUrl += '&debugwx=1';
             }
 
+            // 支付返回：通知 room.php 直接播放直播画面，不再显示“点击观看”按钮
+            if (payResult) {
+                targetUrl += '&autoplay=1';
+            }
+
             /*
              * iframe 加载完成以后：
              * 1. 索取直播标题
